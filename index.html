@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+<body style="font-family:sans-serif;text-align:center;">
+<div id="container"></div>
+
+<script>
+function callback(data){
+  var h1Element = document.createElement("h1");
+  h1Element.innerHTML=data.ip;
+  h1Element.classList.add("animated");
+  h1Element.classList.add("fadeInUp");
+  document.getElementById("container").appendChild(h1Element);
+}
+</script>
+<script src="https://api.ipify.org/?format=jsonp"></script>
+</body>
+</html>
